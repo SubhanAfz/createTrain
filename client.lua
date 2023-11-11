@@ -17,11 +17,11 @@ while true do
     if msg[1] == "paymentAuthorised" and msg[2] == username then
         if msg[3] == true then
             print("Authorised!")
-
+            speaker.playNote("bell", 1, 1)
             rs.setOutput("back", true)
             sleep(2)
             rs.setOutput("back", false)
-            speaker.playNote("bell", 1, 1)
+
             
         else
             print("Unauthorised!")
